@@ -50,76 +50,105 @@
     </div>
     <!-- Loader End -->
 
-        <!--start header area-->
-        <header class="header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="logo">
-                            <a href="index.html"><img src="image/dummy-icon-evererst-logo.webp" alt="Icon Everest Logo"></a>
-                        </div>
+    <!--start header area-->
+    <header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <a href="index.html"><img src="image/dummy-icon-evererst-logo.webp" alt="Icon Everest Logo"></a>
                     </div>
-                    <div class="col-md-8">
-                        <div class="main-menu">
-                            <nav>
-                                <ul id="nav">
-                                    <li><a href="index.html">Home</a>
-                                    </li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href='our-services.html'>Services</a></li>
-                                    <li><a href="#">More Info</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="payment-method.html">Payment Method</a></li>
-											<li><a href="privacy-notice.html">Privacy Notice</a></li>
-                                            <li><a href="careers.html">Careers</a></li>
-										</ul>
-                                    </li>
-                                    <li class="active"><a href="contact-us.html">Contacts</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="socia-icon">
-                            <ul>
-                                <a href="apply-now.html"><button type="button" class="btn button-navbar">Apply Now<i class="arrow_right"></i></button></a>
+                </div>
+                <div class="col-md-9">
+                    <div class="main-menu">
+                        <nav>
+                            <ul id="nav">
+                                <li><a href="index.html" id="HomeNav">Home</a>
+                                </li>
+                                <li><a href="about-us.html" id="AboutUsNav">About Us</a></li>
+                                <li><a href='our-services.html' id="ServicesNav">Services</a></li>
+                                <li><a href="#" id="MoreInfoNav">More Info</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="payment-method.html" id="PaymentMethodNav">Payment Method</a></li>
+                                        <li><a href="privacy-notice.html" id="PrivacyNoticeNav">Privacy Notice</a></li>
+                                        <li><a href="careers.html" id="CareersNav">Careers</a></li>
+                                        <li><a href="blog.html" id="BlogNav">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="contact-us.html" id="ContactUsNav">Contacts</a></li>
                             </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="socia-icon">
+                        <ul>
+                            <a href="apply-now.html"><button type="button" class="btn button-navbar"
+                                    id="ApplyNowNav">Apply Now<i class="arrow_right"></i></button></a>
+                        </ul>
+                    </div>
+
+                    <!-- Language Switcher Start Here -->
+                    <div class="switch">
+                        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                        <label for="language-toggle"></label>
+                        <span class="on">EN</span>
+                        <span class="off">BM</span>
+                    </div>
+                    <!-- Language Switcher End Here -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile-menu-area start -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mobile-menu">
+                        <div class="logo">
+                            <a href="index.html"><img src="image/dummy-icon-evererst-logo.webp"
+                                    alt="Icon Everest Credit Logo" /></a>
                         </div>
+                        <nav id="dropdown">
+                            <ul>
+                                <li><a href="index.html" id="HomeMobileNav">Home</a></li>
+                                <li><a href="about-us.html" id="AboutUsMobileNav">About Us</a></li>
+                                <li><a href="our-services.html" id="ServicesMobileNav">Services</a></li>
+                                <li><a href="#" id="MoreInfoMobileNav">More Info</a>
+                                    <ul>
+                                        <li><a href="payment-method.html" id="PaymentMethodMobileNav">Payment Method</a>
+                                        </li>
+                                        <li><a href="privacy-notice.html" id="PrivacyNoticeMobileNav">Privacy Notice</a>
+                                        </li>
+                                        <li><a href="career.html" id="CareerMobileNav">Career</a></li>
+                                        <li><a href="blog.html" id="CareerMobileNav">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact-us.html" id="ContactMobileNav">Contacts</a></li>
+                                <li><a href="apply-now.html"><button type="button" class="btn button-navbar"
+                                            id="ApplyNowMobileNav">Apply Now<i class="arrow_right"></i></button></a>
+                                </li>
+
+                                <!-- Language Switcher Start Here -->
+                                <li>
+                                    <div class="switch mobile">
+                                        <input id="language-toggle" class="check-toggle check-toggle-round-flat"
+                                            type="checkbox">
+                                        <label for="language-toggle"></label>
+                                        <span class="on">EN</span>
+                                        <span class="off">BM</span>
+                                    </div>
+                                </li>
+                                <!-- Language Switcher End Here -->
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- mobile-menu-area start -->
-		<div class="mobile-menu-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mobile-menu">
-							<div class="logo">
-								<a href="index.html"><img src="image/dummy-icon-evererst-logo.webp" alt="Icon Everest Credit Logo" /></a>
-							</div>
-							<nav id="dropdown">
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about-us.html">About Us</a></li>
-									<li><a href="our-services.html">Services</a></li>
-									<li><a href="#">More Info</a>
-										<ul>										
-											<li><a href="payment-method.html">Payment Method</a></li>
-                                            <li><a href="privacy-notice.html">Privacy Notice</a></li>
-                                            <li><a href="career.html">Career</a></li>
-										</ul>
-									</li>
-									<li><a href="contact-us.html">Contacts</a></li>
-                                    <li><a href="apply-now.html"><button type="button" class="btn button-navbar">Apply Now<i class="arrow_right"></i></button></a></li>
-								</ul>
-							</nav>
-						</div>					
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- mobile-menu-area end -->
+        </div>
+    </div>
+    <!-- mobile-menu-area end -->
 
     <!--End header area -->
     <!-- Start contact area-->
@@ -223,7 +252,7 @@
                     </div>
                     <div class="col-md-7 col-sm-6">
                         <ul class="nav footer-nav">
-                            <li><a href="blog-inner.html">Blog</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                             <li><a href="privacy-notice.html">Privacy Policy </a></li>
                             <li><a href="#">Terms of Use</a></li>
                             <li><a href="contact-us.html">Contacts</a></li>
