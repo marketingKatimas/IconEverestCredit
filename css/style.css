@@ -71,6 +71,7 @@
 body {
   font: 400 16px/26px "Oxygen", sans-serif;
   color: #666666;
+  overflow-x: hidden; 
 }
 
 ul, h2, h3, h4, h5, h6 {
@@ -732,7 +733,7 @@ label{
   text-shadow: none;
 }
 .header-area .main-menu nav ul li + li {
-  margin-left: 61px;
+  margin-left: 50px;
 }
 .header-area .main-menu nav ul li .sub-menu {
   position: absolute;
@@ -2926,7 +2927,7 @@ input.check-toggle-round-flat:checked~.on {
 
 .switch>span.off {
   right: 0;
-  padding-right: 50px;
+  padding-right: 60px;
   color: #fff;
 }
 
