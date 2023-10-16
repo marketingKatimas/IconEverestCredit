@@ -44,6 +44,9 @@
 
     <!--responsive css-->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_"></script>
 </head>
 
 <body>
@@ -374,25 +377,43 @@
                         <p id="HaveQuestionDes">If you prefer to reach us through other means, you can also email us at
                             <a href="mailto:contact@iconeverestcredit.com">contact@iconeverestcredit.com</a> or give us
                             a call at <a href="https://api.whatsapp.com/send?phone=60177125008">017-712 5008</a>. We
-                            look forward to assisting you!</p>
+                            look forward to assisting you!
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="question-contact-form">
-                        <form class="contact-form r0w m0 js-ajax-form">
+                        <form id="subscribeForm" class="contact-form r0w m0 js-ajax-form">
                             <input type="text" id="name" name="name" placeholder="Name" required=""
                                 class="form-control">
+                            <div class="error-message" id="nameError" style="color: red; padding-bottom: 40px;"></div>
+
                             <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                            <div class="error-message" id="emailError" style="color: red; padding-bottom: 40px;"></div>
+
                             <input type="tel" id="phone" name="phone" placeholder="Phone" required=""
                                 class="form-control">
+                            <div class="error-message" id="phoneError" style="color: red; padding-bottom: 40px;"></div>
+
                             <textarea id="message" class="form-control" name="message" placeholder="Message"></textarea>
                             <div class="contact-button">
-                                <button type="submit" class="btn submit" id="Send">Send<i
+                                <div class="error-message" id="messageError" style="color: red;"></div>
+
+                                <button type="submit" class="btn submit g-recaptcha" data-sitekey="6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_" data-callback="onSubmit"
+                                data-action="submit" id="Send">Send<i
                                         class="arrow_right"></i></button>
                             </div>
                         </form>
-                        <div id="success">Your message succesfully sent!</div>
-                        <div id="error">Opps! There is something wrong. Please try again</div>
+
+                        <div id="success-message"
+                            style="display: none; color: #fff; border: 1px solid #fff; padding: 20px">
+                            Thanks for contacting us! We will be in touch with you shortly.
+                        </div>
+
+                        <div id="Unsuccessfully-message" style="display: none; color: red;">
+                           The submission was unsuccessful. Please try again.
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -515,6 +536,124 @@
     <script src="js/jquery.validate.min.js"></script>
     <!--main Js-->
     <script src="js/main.js"></script>
+
+    <script>
+        grecaptcha.ready(() => {
+            console.log('grecaptcha is ready');
+        })
+
+        function displayErrorMessage(inputFieldId, errorMessage) {
+            const errorElement = document.getElementById(`${inputFieldId}Error`);
+            if (errorElement) {
+                errorElement.textContent = errorMessage;
+            }
+        }
+
+        function validateForm() {
+            let isValid = true;
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const messageInput = document.getElementById('message');
+
+            if (nameInput.value.trim() === '') {
+                displayErrorMessage('name', 'This field is required.');
+                isValid = false;
+            } else {
+                displayErrorMessage('name', '');
+            }
+
+            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (emailInput.value.trim() === '') {
+                displayErrorMessage('email', 'This field is required.');
+                isValid = false;
+            } else if (!emailRegex.test(emailInput.value)) {
+                displayErrorMessage('email', 'Invalid email format.');
+                isValid = false;
+            } else {
+                displayErrorMessage('email', '');
+            }
+
+            if (phoneInput.value.trim() === '') {
+                displayErrorMessage('phone', 'This field is required.');
+                isValid = false;
+            } else {
+                displayErrorMessage('phone', '');
+            }
+
+            if (messageInput.value.trim() === '') {
+                displayErrorMessage('message', 'This field is required.');
+                isValid = false;
+            } else {
+                displayErrorMessage('message', '');
+            }
+
+            return isValid;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const phoneInput = document.getElementById('phone');
+
+            phoneInput.addEventListener('input', function () {
+                phoneInput.value = phoneInput.value.replace(/\D/g, '');
+            });
+        });
+
+        function serializeForm(formData) {
+            var data = JSON.stringify(formData)
+            return data
+        }
+
+        function sendData(formValue, quiet = false) {
+
+            $.ajax({
+                // url: 'https://scripts.katimas.brixmind.com/form',
+                url: 'http://localhost:3535/form',
+                type: 'POST',
+                data: formValue,
+                success: function (data) {
+                    console.log('Success:', data);
+                    $('#subscribeForm').hide();
+                    $('#success-message').show();
+                    resetForm();
+                },
+                error: function (xhr, status, error) {
+                    if (!quiet) {
+                        console.error('An error occurred:', error);
+                        $('#Unsuccessfully-message').show();
+                    }
+                }
+            });
+        }
+
+        function resetForm() {
+            $(':input', '#subscribeForm')
+                .not(':button, :submit, :reset, :hidden')
+                .val('')
+                .prop('checked', false)
+                .prop('selected', false);
+        }
+
+        function onSubmit(token, quiet = false) {
+            const form = $('#subscribeForm');
+            const formValue = form.serialize();
+
+            if (validateForm()) {
+                grecaptcha.execute('6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_', { action: 'submit' }).then((token) => {
+                    var form = $('#subscribeForm');
+                    form.prepend(`<input type="hidden" name="token" value="${token}" />`);
+                    sendData(form.serialize(), quiet);
+                })
+                    .catch((error) => {
+                        console.log('An error occurred executing grecaptcha:', error);
+                    });
+            }
+        }
+        $(document).ready(() => {
+            $('.error_message').hide();
+        })
+    </script>
 </body>
 
 </html>

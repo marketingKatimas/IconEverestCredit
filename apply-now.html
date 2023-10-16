@@ -33,6 +33,9 @@
 
     <!--responsive css-->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_"></script>
 </head>
 
 <body>
@@ -159,7 +162,8 @@
                 <div class="">
                     <h2 class="section-header" id="ApplyNowHeader">i-FUND Online Application<span>.</span></h2>
                 </div>
-                <p id="ApplyNowHeaderDes">we offer a variety of financing solutions to cater to your personal needs with hassle-free
+                <p id="ApplyNowHeaderDes">we offer a variety of financing solutions to cater to your personal needs with
+                    hassle-free
                     applications and simple documents requirements.</p>
             </div>
             <div class="row contact-info-section">
@@ -210,20 +214,20 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="question-contact-form-apply">
-                                <form class="contact-form r0w m0 js-ajax-form" id="applyForm" method="POST">
+                                <form class="contact-form r0w" id="applyForm" method="POST">
                                     <div class="formbold-mb-3">
                                         <label for="amount" class="formbold-form-label" id="LoanAmount"> Loan
                                             Amount (RM): </label>
                                         <input type="text" name="amount" id="amount" placeholder="0"
                                             class="formbold-form-input" inputmode="numeric" />
-                                        <div class="error-message" id="amountError" style="color: red;"></div>
+                                        <div class="error-message" id="amountError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <div class="formbold-mb-3">
                                         <label for="age" class="formbold-form-label" id="LoanAge"> Age: </label>
                                         <input type="text" name="age" id="age" placeholder="0"
                                             class="formbold-form-input" inputmode="numeric" />
-                                        <div class="error-message" id="ageError" style="color: red;"></div>
+                                        <div class="error-message" id="ageError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <div class="formbold-mb-3">
@@ -231,7 +235,7 @@
                                             NRIC: </label>
                                         <input type="text" name="name" id="name" placeholder="ex: John Doe"
                                             class="formbold-form-input" />
-                                        <div class="error-message" id="nameError" style="color: red;"></div>
+                                        <div class="error-message" id="nameError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <div class="formbold-mb-3">
@@ -239,7 +243,7 @@
                                             Email:</label>
                                         <input type="text" name="email" id="email" placeholder="ex: johnDeo@gmail.com"
                                             class="formbold-form-input" inputmode="email" />
-                                        <div class="error-message" id="emailError" style="color: red;"></div>
+                                        <div class="error-message" id="emailError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <div class="formbold-mb-3">
@@ -247,7 +251,7 @@
                                             Contact No.: </label>
                                         <input type="text" name="phone" id="phone" placeholder="ex: 0123456789"
                                             class="formbold-form-input" inputmode="numeric" />
-                                        <div class="error-message" id="phoneError" style="color: red;"></div>
+                                        <div class="error-message" id="phoneError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <div class="formbold-mb-3">
@@ -262,7 +266,7 @@
                                             </option>
                                             <option value="private" id="Private">Private</option>
                                         </select>
-                                        <div class="error-message" id="sectorError" style="color: red;"></div>
+                                        <div class="error-message" id="sectorError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <div class="formbold-mb-3">
@@ -270,7 +274,7 @@
                                             Monthly Gross Salary (RM): </label>
                                         <input type="text" name="salary" id="salary" placeholder="0"
                                             class="formbold-form-input" inputmode="numeric" />
-                                        <div class="error-message" id="salaryError" style="color: red;"></div>
+                                        <div class="error-message" id="salaryError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <div class="formbold-mb-3">
@@ -278,7 +282,7 @@
                                             Monthly Nett Salary (RM): </label>
                                         <input type="text" name="nettSalary" id="nettSalary" placeholder="0"
                                             class="formbold-form-input" inputmode="numeric" />
-                                        <div class="error-message" id="nettSalaryError" style="color: red;"></div>
+                                        <div class="error-message" id="nettSalaryError" style="color: #14b6f2;"></div>
                                     </div>
 
                                     <!-- <div class="formbold-checkbox-wrapper">
@@ -308,11 +312,19 @@
                                             data-sitekey="6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_" data-callback='onSubmit'
                                             data-action='submit' id="Submit">Submit</button> -->
 
-                                    <div class="col-sm-12"><button type="submit" class="btn submit" id="SendBtn">Send<i
-                                                class="arrow_right"></i></button></div>
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn submit g-recaptcha" data-sitekey="6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_" data-callback='onSubmit'
+                                        data-action='submit' id="SendBtn">Send<i class="arrow_right"></i></button>
+                                    </div>
                                 </form>
-                                <div id="success">Your message succesfully sent!</div>
-                                <div id="error">Opps! There is something wrong. Please try again</div>
+                                <div id="success-message"
+                                    style="display: none; color: #14b6f2;; border: 1px solid #14b6f2;; padding: 20px">
+                                    Thanks for contacting us! We will be in touch with you shortly.
+                                </div>
+
+                                <div id="Unsuccessfully-message" style="display: none; color: #fff;">
+                                    The submission was unsuccessful. Please try again.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -411,21 +423,172 @@
     <script src="js/langSwitch/apply-now.js"></script>
     <script src="js/jquery-2.2.0.min.js"></script>
     <!--bootstrap Js-->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- meanmenu js -->
-    <script src="js/jquery.meanmenu.js"></script>
+    <!-- <script src="js/jquery.meanmenu.js"></script> -->
     <!-- counter js-->
-    <script src="vendors/waypoint/waypoints.min.js"></script>
+    <!-- <script src="vendors/waypoint/waypoints.min.js"></script>
     <script src="vendors/couterup/jquery.counterup.min.js"></script>
-    <script src="vendors/circle-progress/circle-progress.js"></script>
+    <script src="vendors/circle-progress/circle-progress.js"></script> -->
     <!--owl Js-->
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <!-- <script src="vendors/owl-carousel/owl.carousel.min.js"></script> -->
     <!--contact js-->
-    <script src="js/jquery.form.js"></script>
+    <!-- <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/contact.js"></script> -->
     <!--main Js-->
     <script src="js/main.js"></script>
+
+    <script>
+        grecaptcha.ready(() => {
+            console.log('grecaptcha is ready');
+        })
+
+        function displayErrorMessage(inputFieldId, errorMessage) {
+            const errorElement = document.getElementById(`${inputFieldId}Error`);
+            if (errorElement) {
+                errorElement.textContent = errorMessage;
+            }
+        }
+
+        function validateForm() {
+            let isValid = true;
+            const amountInput = document.getElementById('amount');
+            const ageInput = document.getElementById('age');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const sectorInput = document.getElementById('sector');
+            const salaryInput = document.getElementById('salary');
+            const nettSalaryInput = document.getElementById('nettSalary');
+
+            if (amountInput.value.trim() === '') {
+                displayErrorMessage('amount', 'This fields is required');
+                isValid = false;
+            } else {
+                displayErrorMessage('amount', '');
+            }
+
+            if (ageInput.value.trim() === '') {
+                displayErrorMessage('age', 'This fields is required');
+                isValid = false;
+            } else {
+                displayErrorMessage('age', '');
+            }
+
+            if (nameInput.value.trim() === '') {
+                displayErrorMessage('name', 'This fields is required');
+                isValid = false;
+            } else {
+                displayErrorMessage('name', '');
+            }
+
+            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (emailInput.value.trim() === '') {
+                displayErrorMessage('email', 'This field is required.');
+                isValid = false;
+            } else if (!emailRegex.test(emailInput.value)) {
+                displayErrorMessage('email', 'Invalid email format.');
+                isValid = false;
+            } else {
+                displayErrorMessage('email', '');
+            }
+
+            if (phoneInput.value.trim() === '') {
+                displayErrorMessage('phone', 'This fields is required');
+                isValid = false;
+            } else {
+                displayErrorMessage('phone', '');
+            }
+
+            if (sectorInput.value.trim() === '' || sectorInput.value === 'default') {
+                displayErrorMessage('sector', 'Please select a sector');
+                isValid = false;
+            } else {
+                displayErrorMessage('sector', '');
+            }
+
+            if (salaryInput.value.trim() === '') {
+                displayErrorMessage('salary', 'This fields is required');
+                isValid = false;
+            } else {
+                displayErrorMessage('salary', '');
+            }
+
+            if (nettSalaryInput.value.trim() === '') {
+                displayErrorMessage('nettSalary', 'This fields is required');
+                isValid = false;
+            } else {
+                displayErrorMessage('nettSalary', '');
+            }
+
+            return isValid;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputFields = ['amount', 'age', 'phone', 'salary', 'nettSalary'];
+
+            inputFields.forEach(function (fieldId) {
+                const inputField = document.getElementById(fieldId);
+                inputField.addEventListener('input', function () {
+                    inputField.value = inputField.value.replace(/\D/g, '');
+                });
+            });
+        });
+
+        function serializeForm(formData) {
+            var data = JSON.stringify(formData)
+            return data
+        }
+
+        function sendData(formValue, quiet = false) {
+            $.ajax({
+                // url: 'https://scripts.katimas.brixmind.com/applyform',
+                url: 'http://localhost:3535/applyform',
+                type: 'POST',
+                data: formValue,
+                success: function (data) {
+                    console.log('Success', data);
+                    $('#applyForm').hide();
+                    $('#success-message').show();
+                    resetForm();
+                },
+                error: function (xhr, status, error) {
+                    if (!quiet) {
+                        console.error('An error occured:', error);
+                        $('#Unsuccessfully-message').show();
+                    }
+                }
+            });
+        }
+
+        function resetForm() {
+            $(':input', '#applyForm')
+                .not(':button, :submit, :reset, :hidden')
+                .val('')
+                .prop('checked', false)
+                .prop('selected', false);
+        }
+
+        function onSubmit(token, quiet = false) {
+            const form = $('#applyForm');
+            const formValue = form.serialize();
+
+            if (validateForm()) {
+                grecaptcha.execute('6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_', { action: 'submit' }).then((token) => {
+                    var form = $('#applyForm');
+                    form.prepend(`<input type="hidden" name="token" value="${token}" />`);
+                    sendData(form.serialize(), quiet);
+                })
+                    .catch((error) => {
+                        console.log('An error occurred executing grecaptcha:', error);
+                    });
+            }
+        }
+        $(document).ready(() => {
+            $('.error_message').hide();
+        });
+    </script>
 </body>
 
 </html>
