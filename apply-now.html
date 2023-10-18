@@ -83,8 +83,8 @@
                 <div class="col-md-1">
                     <div class="socia-icon">
                         <ul>
-                            <a href="apply-now.html"><button type="button" class="btn button-navbar" id="ApplyNowNav">Apply Now<i
-                                        class="arrow_right"></i></button></a>
+                            <a href="apply-now.html"><button type="button" class="btn button-navbar"
+                                    id="ApplyNowNav">Apply Now<i class="arrow_right"></i></button></a>
                         </ul>
                     </div>
 
@@ -117,15 +117,18 @@
                                 <li><a href="our-services.html" id="ServicesMobileNav">Services</a></li>
                                 <li><a href="#" id="MoreInfoMobileNav">More Info</a>
                                     <ul>
-                                        <li><a href="payment-method.html" id="PaymentMethodMobileNav">Payment Method</a></li>
-                                        <li><a href="privacy-notice.html" id="PrivacyNoticeMobileNav">Privacy Notice</a></li>
+                                        <li><a href="payment-method.html" id="PaymentMethodMobileNav">Payment Method</a>
+                                        </li>
+                                        <li><a href="privacy-notice.html" id="PrivacyNoticeMobileNav">Privacy Notice</a>
+                                        </li>
                                         <li><a href="career.html" id="CareerMobileNav">Career</a></li>
                                         <li><a href="blog.html" id="CareerMobileNav">Blog</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact-us.html" id="ContactMobileNav">Contacts</a></li>
-                                <li><a href="apply-now.html"><button type="button" class="btn button-navbar" id="ApplyNowMobileNav">Apply Now<i
-                                                class="arrow_right"></i></button></a></li>
+                                <li><a href="apply-now.html"><button type="button" class="btn button-navbar"
+                                            id="ApplyNowMobileNav">Apply Now<i class="arrow_right"></i></button></a>
+                                </li>
 
                                 <!-- Language Switcher Start Here -->
                                 <li>
@@ -146,6 +149,7 @@
         </div>
     </div>
     <!-- mobile-menu-area end -->
+    <!--End header area-->
 
     <!--End header area -->
     <!-- Start contact area-->
@@ -153,9 +157,10 @@
         <div class="container">
             <div class="row m0 page-cover-apply">
                 <div class="">
-                    <h2 class="section-header">i-FUND Online Application<span>.</span></h2>
+                    <h2 class="section-header" id="ApplyNowHeader">i-FUND Online Application<span>.</span></h2>
                 </div>
-                <p>we offer a variety of financing solutions to cater to your personal needs with hassle-free applications and simple documents requirements.</p>
+                <p id="ApplyNowHeaderDes">we offer a variety of financing solutions to cater to your personal needs with hassle-free
+                    applications and simple documents requirements.</p>
             </div>
             <div class="row contact-info-section">
                 <div class="col-xs-2">
@@ -163,7 +168,7 @@
                         <div class="info-icon">
                             <i class="fa fa-arrow-circle-o-right"></i>
                         </div>
-                        <h5>Submit Application</h5>
+                        <h5 id="SubmitApplication">Submit Application</h5>
                     </div>
                 </div>
                 <div class="col-xs-2">
@@ -171,7 +176,7 @@
                         <div class="info-icon">
                             <i class="fa fa-check-square-o"></i>
                         </div>
-                        <h5>Credit Assessment</h5>
+                        <h5 id="CreditAssessment">Credit Assessment</h5>
                     </div>
                 </div>
                 <div class="col-xs-2">
@@ -179,23 +184,23 @@
                         <div class="info-icon">
                             <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                         </div>
-                        <h5>Approval</h5>
+                        <h5 id="Approval">Approval</h5>
                     </div>
                 </div>
                 <div class="col-xs-2">
-                    <div class="contact-info last-info">
+                    <div class="contact-info info-middle">
                         <div class="info-icon">
-                            <i class="fa fa-pencil-square-o"></i>
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                         </div>
-                        <h5>Sign Agreement</h5>
+                        <h5 id="SignAgreement">Sign Agreement</h5>
                     </div>
                 </div>
                 <div class="col-xs-2">
-                    <div class="contact-info last-info">
+                    <div class="contact-info info-middle">
                         <div class="info-icon">
-                            <i class="fa fa-money"></i>
+                            <i class="fa fa-money" aria-hidden="true"></i>
                         </div>
-                        <h5>Receive Money</h5>
+                        <h5 id="ReceiveMoney">Receive Money</h5>
                     </div>
                 </div>
             </div>
@@ -206,76 +211,77 @@
                         <div class="col-sm-12">
                             <div class="question-contact-form-apply">
                                 <form class="contact-form r0w m0 js-ajax-form" id="applyForm" method="POST">
-                                        <div class="formbold-mb-3">
-                                            <label for="amount" class="formbold-form-label" id="LoanAmount"> Loan
-                                                Amount (RM): </label>
-                                            <input type="text" name="amount" id="amount" placeholder="0"
-                                                class="formbold-form-input" inputmode="numeric" />
-                                            <div class="error-message" id="amountError" style="color: red;"></div>
-                                        </div>
-    
-                                        <div class="formbold-mb-3">
-                                            <label for="age" class="formbold-form-label" id="LoanAge"> Age: </label>
-                                            <input type="text" name="age" id="age" placeholder="0"
-                                                class="formbold-form-input" inputmode="numeric" />
-                                            <div class="error-message" id="ageError" style="color: red;"></div>
-                                        </div>
-    
-                                        <div class="formbold-mb-3">
-                                            <label for="name" class="formbold-form-label" id="NameAs"> Name as In
-                                                NRIC: </label>
-                                            <input type="text" name="name" id="name" placeholder="ex: John Doe"
-                                                class="formbold-form-input" />
-                                            <div class="error-message" id="nameError" style="color: red;"></div>
-                                        </div>
-    
-                                        <div class="formbold-mb-3">
-                                            <label for="email" class="formbold-form-label" id="Email">
-                                                Email:</label>
-                                            <input type="text" name="email" id="email" placeholder="ex: johnDeo@gmail.com"
-                                                class="formbold-form-input" inputmode="email" />
-                                            <div class="error-message" id="emailError" style="color: red;"></div>
-                                        </div>
-    
-                                        <div class="formbold-mb-3">
-                                            <label for="phone" class="formbold-form-label" id="Mobile"> Mobile
-                                                Contact No.: </label>
-                                            <input type="text" name="phone" id="phone" placeholder="ex: 0123456789"
-                                                class="formbold-form-input" inputmode="numeric" />
-                                            <div class="error-message" id="phoneError" style="color: red;"></div>
-                                        </div>
-    
-                                        <div class="formbold-mb-3">
-                                            <label for="sector" class="formbold-form-label" id="EmploymentSector">
-                                                Employment Sector: </label>
-                                            <select class="formbold-form-input-option" name="sector" id="sector">
-                                                <option value="" disabled selected id="PleaseSelect" class="select">Please Select
-                                                </option>
-                                                <option value="government" id="Government">Government</option>
-                                                <option value="government-link" id="GovernmentLink">Government Link
-                                                </option>
-                                                <option value="private" id="Private">Private</option>
-                                            </select>
-                                            <div class="error-message" id="sectorError" style="color: red;"></div>
-                                        </div>
-    
-                                        <div class="formbold-mb-3">
-                                            <label for="salary" class="formbold-form-label" id="MonthlyGrossSalary">
-                                                Monthly Gross Salary (RM): </label>
-                                            <input type="text" name="salary" id="salary" placeholder="0"
-                                                class="formbold-form-input" inputmode="numeric" />
-                                            <div class="error-message" id="salaryError" style="color: red;"></div>
-                                        </div>
-    
-                                        <div class="formbold-mb-3">
-                                            <label for="salary" class="formbold-form-label" id="MonthlyNettSalary">
-                                                Monthly Nett Salary (RM): </label>
-                                            <input type="text" name="nettSalary" id="nettSalary" placeholder="0"
-                                                class="formbold-form-input" inputmode="numeric" />
-                                            <div class="error-message" id="nettSalaryError" style="color: red;"></div>
-                                        </div>
-    
-                                        <!-- <div class="formbold-checkbox-wrapper">
+                                    <div class="formbold-mb-3">
+                                        <label for="amount" class="formbold-form-label" id="LoanAmount"> Loan
+                                            Amount (RM): </label>
+                                        <input type="text" name="amount" id="amount" placeholder="0"
+                                            class="formbold-form-input" inputmode="numeric" />
+                                        <div class="error-message" id="amountError" style="color: red;"></div>
+                                    </div>
+
+                                    <div class="formbold-mb-3">
+                                        <label for="age" class="formbold-form-label" id="LoanAge"> Age: </label>
+                                        <input type="text" name="age" id="age" placeholder="0"
+                                            class="formbold-form-input" inputmode="numeric" />
+                                        <div class="error-message" id="ageError" style="color: red;"></div>
+                                    </div>
+
+                                    <div class="formbold-mb-3">
+                                        <label for="name" class="formbold-form-label" id="NameAs"> Name as In
+                                            NRIC: </label>
+                                        <input type="text" name="name" id="name" placeholder="ex: John Doe"
+                                            class="formbold-form-input" />
+                                        <div class="error-message" id="nameError" style="color: red;"></div>
+                                    </div>
+
+                                    <div class="formbold-mb-3">
+                                        <label for="email" class="formbold-form-label" id="Email">
+                                            Email:</label>
+                                        <input type="text" name="email" id="email" placeholder="ex: johnDeo@gmail.com"
+                                            class="formbold-form-input" inputmode="email" />
+                                        <div class="error-message" id="emailError" style="color: red;"></div>
+                                    </div>
+
+                                    <div class="formbold-mb-3">
+                                        <label for="phone" class="formbold-form-label" id="Mobile"> Mobile
+                                            Contact No.: </label>
+                                        <input type="text" name="phone" id="phone" placeholder="ex: 0123456789"
+                                            class="formbold-form-input" inputmode="numeric" />
+                                        <div class="error-message" id="phoneError" style="color: red;"></div>
+                                    </div>
+
+                                    <div class="formbold-mb-3">
+                                        <label for="sector" class="formbold-form-label" id="EmploymentSector">
+                                            Employment Sector: </label>
+                                        <select class="formbold-form-input-option" name="sector" id="sector">
+                                            <option value="" disabled selected id="PleaseSelect" class="select">Please
+                                                Select
+                                            </option>
+                                            <option value="government" id="Government">Government</option>
+                                            <option value="government-link" id="GovernmentLink">Government Link
+                                            </option>
+                                            <option value="private" id="Private">Private</option>
+                                        </select>
+                                        <div class="error-message" id="sectorError" style="color: red;"></div>
+                                    </div>
+
+                                    <div class="formbold-mb-3">
+                                        <label for="salary" class="formbold-form-label" id="MonthlyGrossSalary">
+                                            Monthly Gross Salary (RM): </label>
+                                        <input type="text" name="salary" id="salary" placeholder="0"
+                                            class="formbold-form-input" inputmode="numeric" />
+                                        <div class="error-message" id="salaryError" style="color: red;"></div>
+                                    </div>
+
+                                    <div class="formbold-mb-3">
+                                        <label for="salary" class="formbold-form-label" id="MonthlyNettSalary">
+                                            Monthly Nett Salary (RM): </label>
+                                        <input type="text" name="nettSalary" id="nettSalary" placeholder="0"
+                                            class="formbold-form-input" inputmode="numeric" />
+                                        <div class="error-message" id="nettSalaryError" style="color: red;"></div>
+                                    </div>
+
+                                    <!-- <div class="formbold-checkbox-wrapper">
                                                 <label for="supportCheckbox" class="formbold-checkbox-label">
                                                     <div class="formbold-relative">
                                                         <input type="checkbox" name="agreement" id="supportCheckbox"
@@ -297,12 +303,13 @@
                                                     <a href="#" id="textTnC"> terms, conditions, and policies</a>
                                                 </label>
                                             </div> -->
-    
-                                        <!-- <button class="formbold-btn g-recaptcha"
+
+                                    <!-- <button class="formbold-btn g-recaptcha"
                                             data-sitekey="6LdmCn0nAAAAANC8dQDeC3bko97zlloPkuFcyP7_" data-callback='onSubmit'
                                             data-action='submit' id="Submit">Submit</button> -->
 
-                                           <button type="submit" class="btn button-navbar">Send</button>
+                                    <div class="col-sm-12"><button type="submit" class="btn submit" id="SendBtn">Send<i
+                                                class="arrow_right"></i></button></div>
                                 </form>
                                 <div id="success">Your message succesfully sent!</div>
                                 <div id="error">Opps! There is something wrong. Please try again</div>
@@ -315,81 +322,83 @@
     </section>
     <!-- End contact area-->
 
-        <!--start footer area-->
-        <footer class="footer-area">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row footer">
-                        <div class="col-md-3 col-sm-6 col-xs-6">
-                            <div class="widget about-widget">
-                                <h2 class="widget-tittle">icon everest credit</h2>
-                                <p>Your go-to licensed personal financing service with free credit advice. Low interest
-                                    rate, fast approval, hassle-free application process.</p>
-                                <a href="#" class="logo">
-                                    <img src="image/dummy-icon-evererst-logo.webp" alt="Icon Everest Credit Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6">
-                            <div class="widget widget-link">
-                                <h2 class="widget-tittle">Kota Damansara Branch</h2>
-                                <ul>
-                                    <li><a>No. 11-2, Jalan PJU 5/10 Dataran Sunway, Kota Damansara, 47810 Petaling Jaya,
-                                            Selangor</a></li>
-                                    <li><a>License No.: WL6376/10/01-5/160423</a></li>
-                                    <li><a>Advertisement Permit No.: WP6376/10/01-5/160423</a></li>
-    
-                                    <br>
-                                    <li><a href="#">Office Tel: 03-6140 7050</a></li>
-                                    <li><a href="#">WhatsApp No.: 017-7125008</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6">
-                            <div class="widget widget-link">
-                                <h2 class="widget-tittle">Genting Klang Branch</h2>
-                                <ul>
-                                    <li><a>No. 2-1, Jalan 3/50C, Taman Setapak Indah Jaya, Off Jalan Genting Kelang, 53300
-                                            Kuala Lumpur, WPKL</a></li>
-                                    <li><a>License No.: WL6377/14/01-5/170323</a></li>
-                                    <li><a>Advertisement Permit No.: WP6377/14/01-5/170323</a></li>
-    
-                                    <br>
-                                    <li><a href="#">Office Tel: 03-40255338</a></li>
-                                    <li><a href="#">WhatsApp No.: 010-2400027</a></li>
-                                </ul>
-                            </div>
+    <!--start footer area-->
+    <footer class="footer-area">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row footer">
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <div class="widget about-widget">
+                            <h2 class="widget-tittle">icon everest credit</h2>
+                            <p id="FooterDes">Your go-to licensed personal financing service with free credit advice.
+                                Low interest
+                                rate, fast approval, hassle-free application process.</p>
+                            <a href="#" class="logo">
+                                <img src="image/dummy-icon-evererst-logo.webp" alt="Icon Everest Credit Logo">
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-4">
-                            <span>© <a href="index.html">Icon Everest Credit</a> 2023. All Rights Reserved.</span>
-                        </div>
-                        <div class="col-md-7 col-sm-6">
-                            <ul class="nav footer-nav">
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="privacy-notice.html">Privacy Policy </a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="contact-us.html">Contacts</a></li>
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="widget widget-link">
+                            <h2 class="widget-tittle">Kota Damansara Branch</h2>
+                            <ul>
+                                <li><a>No. 11-2, Jalan PJU 5/10 Dataran Sunway, Kota Damansara, 47810 Petaling Jaya,
+                                        Selangor</a></li>
+                                <li><a>License No.: WL6376/10/01-5/160423</a></li>
+                                <li><a>Advertisement Permit No.: WP6376/10/01-5/160423</a></li>
+
+                                <br>
+                                <li><a href="#">Office Tel: 03-6140 7050</a></li>
+                                <li><a href="#">WhatsApp No.: 017-7125008</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2 col-sm-2">
-                            <div class="social-nav">
-                                <ul class="nav">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="widget widget-link">
+                            <h2 class="widget-tittle">Genting Klang Branch</h2>
+                            <ul>
+                                <li><a>No. 2-1, Jalan 3/50C, Taman Setapak Indah Jaya, Off Jalan Genting Kelang, 53300
+                                        Kuala Lumpur, WPKL</a></li>
+                                <li><a>License No.: WL6377/14/01-5/170323</a></li>
+                                <li><a>Advertisement Permit No.: WP6377/14/01-5/170323</a></li>
+
+                                <br>
+                                <li><a href="#">Office Tel: 03-40255338</a></li>
+                                <li><a href="#">WhatsApp No.: 010-2400027</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <span>© <a href="index.html">Icon Everest Credit</a> 2023. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-7 col-sm-6">
+                        <ul class="nav footer-nav">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="privacy-notice.html" id="PrivacyPolicyFooter">Privacy Policy </a></li>
+                            <li><a href="#" id="TermOfUseFooter">Terms of Use</a></li>
+                            <li><a href="contact-us.html" id="ContactsFooter">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="social-nav">
+                            <ul class="nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End footer area-->
 
     <!-- Whatsapp Icon -->
     <div class="scroll-top-whatsapp">
@@ -398,6 +407,8 @@
     </div>
     <!--End Footer area-->
     <!--All JS Files Here-->
+    <!-- Language Switch -->
+    <script src="js/langSwitch/apply-now.js"></script>
     <script src="js/jquery-2.2.0.min.js"></script>
     <!--bootstrap Js-->
     <script src="js/bootstrap.min.js"></script>

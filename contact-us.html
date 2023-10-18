@@ -149,6 +149,7 @@
         </div>
     </div>
     <!-- mobile-menu-area end -->
+    <!--End header area-->
 
     <!--End header area -->
     <!-- Start contact area-->
@@ -156,9 +157,9 @@
         <div class="container">
             <div class="row m0 page-cover">
                 <div class="">
-                    <h2 class="section-header">Contacts<span>.</span></h2>
+                    <h2 class="section-header" id="ContactHeader">Contacts<span>.</span></h2>
                 </div>
-                <p>You can also leave us a message and we will arrange for a call back as soon as possible.</p>
+                <p id="ContactHeaderDes">You can also leave us a message and we will arrange for a call back as soon as possible.</p>
             </div>
 
             <div class="row m0 contact-form-box">
@@ -186,7 +187,7 @@
                             <textarea name="message" id="message" class="form-control" placeholder="Message"></textarea>
                         </div>
                     </div>
-                    <div class="col-sm-12"><button type="submit" class="btn submit">Send<i
+                    <div class="col-sm-12"><button type="submit" class="btn submit" id="SendBtn">Send<i
                                 class="arrow_right"></i></button></div>
                 </form>
                 <div id="success">Your message succesfully sent!</div>
@@ -204,7 +205,8 @@
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="widget about-widget">
                             <h2 class="widget-tittle">icon everest credit</h2>
-                            <p>Your go-to licensed personal financing service with free credit advice. Low interest
+                            <p id="FooterDes">Your go-to licensed personal financing service with free credit advice.
+                                Low interest
                                 rate, fast approval, hassle-free application process.</p>
                             <a href="#" class="logo">
                                 <img src="image/dummy-icon-evererst-logo.webp" alt="Icon Everest Credit Logo">
@@ -253,9 +255,9 @@
                     <div class="col-md-7 col-sm-6">
                         <ul class="nav footer-nav">
                             <li><a href="blog.html">Blog</a></li>
-                            <li><a href="privacy-notice.html">Privacy Policy </a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="contact-us.html">Contacts</a></li>
+                            <li><a href="privacy-notice.html" id="PrivacyPolicyFooter">Privacy Policy </a></li>
+                            <li><a href="#" id="TermOfUseFooter">Terms of Use</a></li>
+                            <li><a href="contact-us.html" id="ContactsFooter">Contacts</a></li>
                         </ul>
                     </div>
                     <div class="col-md-2 col-sm-2">
@@ -271,6 +273,7 @@
             </div>
         </div>
     </footer>
+    <!--End footer area-->
 
     <!-- Whatsapp Icon -->
     <div class="scroll-top-whatsapp">
@@ -279,6 +282,8 @@
     </div>
     <!--End Footer area-->
     <!--All JS Files Here-->
+    <!-- Language Switch -->
+    <script src="js/langSwitch/contact-us.js"></script>
     <script src="js/jquery-2.2.0.min.js"></script>
     <!--bootstrap Js-->
     <script src="js/bootstrap.min.js"></script>

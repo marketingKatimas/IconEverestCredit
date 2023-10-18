@@ -22,29 +22,38 @@ const CareerMobileNav = document.getElementById('CareerMobileNav');
 const ContactMobileNav = document.getElementById('ContactMobileNav');
 const ApplyNowMobileNav = document.getElementById('ApplyNowMobileNav');
 
-//Banner
-const LowInterestRate = document.getElementById('LowInterestRate');
-const ApplyNowSlide = document.getElementById('ApplyNowSlide');
-const Information = document.getElementById('Information');
-const FastApproval = document.getElementById('FastApproval');
-const ContactUsSlide = document.getElementById('ContactUsSlide');
+// Header
+const ContactHeader = document.getElementById('ContactHeader');
+const ContactHeaderDes = document.getElementById('ContactHeaderDes');
 
+//Contact Form
+const fname = document.getElementById('name');
+const femail = document.getElementById('email');
+const fphone = document.getElementById('phone');
+const fmessage = document.getElementById('message');
+const SendBtn = document.getElementById('SendBtn');
 
-
+//Footer
+const FooterDes = document.getElementById('FooterDes');
+const PrivacyPolicyFooter = document.getElementById('PrivacyPolicyFooter');
+const TermOfUseFooter = document.getElementById('TermOfUseFooter');
+const ContactsFooter = document.getElementById('ContactsFooter');
 
 // Check the current language preference and update the switch accordingly
 if (localStorage.getItem('language') === 'bm') {
     languageToggle.checked = true;
     updateNavbar('bm');
     updateMobileNavbar('bm');
-    updateBanner('bm');
-
+    updateHeader('bm');
+    updateContact('bm');
+    updateFooter('bm');
 } else {
     languageToggle.checked = false;
     updateNavbar('en');
     updateMobileNavbar('en');
-    updateBanner('en');
-
+    updateHeader('en');
+    updateContact('en');
+    updateFooter('en');
 }
 
 // Add event listener to the language toggle checkbox
@@ -52,14 +61,16 @@ languageToggle.addEventListener('change', function () {
     if (this.checked) {
         updateNavbar('bm');
         updateMobileNavbar('bm');
-        updateBanner('bm');
-
+        updateHeader('bm');
+        updateContact('bm');
+        updateFooter('bm');
         localStorage.setItem('language', 'bm');
     } else {
         updateNavbar('en');
         updateMobileNavbar('en');
-        updateBanner('en');
-
+        updateHeader('en');
+        updateContact('en');
+        updateFooter('en');
         localStorage.setItem('language', 'en');
     }
 });
@@ -112,18 +123,42 @@ function updateMobileNavbar(language) {
     }
 }
 
-function updateBanner(language) {
+function updateHeader(language) {
     if (language === 'bm') {
-        LowInterestRate.textContent = 'Icon Everest Credit Membiayai gaya hidup anda dengan kadar faedah serendah 0.66%';
-        ApplyNowSlide.innerHTML = 'Mohon Sekarang <i class="arrow_right">';
-        Information.textContent = 'Maklumat';
-        FastApproval.textContent = 'Memperkenalkan i-CREDIT - kemudahan pembiayaan peribadi dengan Kelulusan Pantas, Bayaran Balik Bulanan Fleksibel, dan Kadar Faedah Terendah di Malaysia!';
-        ContactUsSlide.innerHTML = 'Hubungi Kami <i class="arrow_right">';
+        ContactHeader.innerHTML = 'Hubungi<span>.</span>';
+        ContactHeaderDes.textContent = 'Anda juga boleh meninggalkan mesej kepada kami dan kami akan mengaturkan panggilan semula secepat mungkin';
     } else {
-        LowInterestRate.textContent = 'Icon Everest Credit Financing your lifestyle with interest rates as low as 0.66%';
-        ApplyNowSlide.innerHTML = 'Apply Now <i class="arrow_right">';
-        Information.textContent = 'Information';
-        FastApproval.textContent = 'Introducing i-CREDIT a personal financing facility with Fast Approval, Flexible Monthly Payment and Lowest Interest Rate in Malaysia!';
-        ContactUsSlide.innerHTML = 'Contact Us <i class="arrow_right">';
+        ContactHeader.innerHTML = 'Contacts<span>.</span>';
+        ContactHeaderDes.textContent = 'You can also leave us a message and we will arrange for a call back as soon as possible.';
+    }
+}
+
+function updateContact(language) {
+    if (language === 'bm') {
+        fname.placeholder = 'Nama';
+        femail.placeholder = 'Emel';
+        fphone.placeholder = 'Telefon';
+        fmessage.placeholder = 'Mesej';
+        SendBtn.innerHTML = 'Hantar <i class="arrow_right"></i>';
+    } else {
+        fname.placeholder = 'Name';
+        femail.placeholder = 'Email';
+        fphone.placeholder = 'Phone';
+        fmessage.placeholder = 'Message';
+        SendBtn.innerHTML = 'Send <i class="arrow_right"></i>';
+    }
+}
+
+function updateFooter(language) {
+    if (language === 'bm') {
+        FooterDes.textContent = 'Perkhidmatan pembiayaan peribadi berlesen anda dengan nasihat kredit percuma. Kadar faedah rendah, kelulusan cepat, proses permohonan tanpa kerumitan.';
+        PrivacyPolicyFooter.textContent = 'Notis Privasi';
+        TermOfUseFooter.textContent = 'Syarat Penggunaan';
+        ContactsFooter.textContent = 'Hubungi';
+    } else {
+        FooterDes.textContent = 'Your go-to licensed personal financing service with free credit advice. Low interest rate, fast approval, hassle-free application process.';
+        PrivacyPolicyFooter.textContent = 'Privacy Policy';
+        TermOfUseFooter.textContent = 'Terms of Use';
+        ContactsFooter.textContent = 'Contacts';
     }
 }
