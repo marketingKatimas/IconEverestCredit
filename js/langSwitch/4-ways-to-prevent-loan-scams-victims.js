@@ -7,7 +7,6 @@ const ServicesNav = document.getElementById('ServicesNav');
 const MoreInfoNav = document.getElementById('MoreInfoNav');
 const PaymentMethodNav = document.getElementById('PaymentMethodNav');
 const PrivacyNoticeNav = document.getElementById('PrivacyNoticeNav');
-const CareersNav = document.getElementById('CareersNav');
 const ContactUsNav = document.getElementById('ContactUsNav');
 const ApplyNowNav = document.getElementById('ApplyNowNav');
 
@@ -18,7 +17,6 @@ const ServicesMobileNav = document.getElementById('ServicesMobileNav');
 const MoreInfoMobileNav = document.getElementById('MoreInfoMobileNav');
 const PaymentMethodMobileNav = document.getElementById('PaymentMethodMobileNav');
 const PrivacyNoticeMobileNav = document.getElementById('PrivacyNoticeMobileNav');
-const CareerMobileNav = document.getElementById('CareerMobileNav');
 const ContactMobileNav = document.getElementById('ContactMobileNav');
 const ApplyNowMobileNav = document.getElementById('ApplyNowMobileNav');
 
@@ -105,7 +103,6 @@ function updateNavbar(language) {
         MoreInfoNav.textContent = 'Maklumat Lanjut';
         PaymentMethodNav.textContent = 'Cara Menbayar';
         PrivacyNoticeNav.textContent = 'Notis Privasi';
-        CareersNav.textContent = 'Kerjaya';
         ContactUsNav.textContent = 'Hubungi Kami';
         ApplyNowNav.innerHTML = 'Mohon Sekarang <i class="arrow_right">';
     } else {
@@ -115,7 +112,6 @@ function updateNavbar(language) {
         MoreInfoNav.textContent = 'More Info';
         PaymentMethodNav.textContent = 'Payment Method';
         PrivacyNoticeNav.textContent = 'Privacy Notice';
-        CareersNav.textContent = 'Careers';
         ContactUsNav.textContent = 'Contacts';
         ApplyNowNav.innerHTML = 'Apply Now <i class="arrow_right">';
     }
@@ -129,7 +125,6 @@ function updateMobileNavbar(language) {
         MoreInfoMobileNav.textContent = 'Maklumat Lanjut';
         PaymentMethodMobileNav.textContent = 'Cara Menbayar';
         PrivacyNoticeMobileNav.textContent = 'Notis Privasi';
-        CareerMobileNav.textContent = 'Kerjaya';
         ContactMobileNav.textContent = 'Hubungi Kami';
         ApplyNowMobileNav.innerHTML = 'Mohon Sekarang <i class="arrow_right">';
     } else {
@@ -139,7 +134,6 @@ function updateMobileNavbar(language) {
         MoreInfoMobileNav.textContent = 'More Info';
         PaymentMethodMobileNav.textContent = 'Payment Method';
         PrivacyNoticeMobileNav.textContent = 'Privacy Notice';
-        CareerMobileNav.textContent = 'Careers';
         ContactMobileNav.textContent = 'Contacts';
         ApplyNowMobileNav.innerHTML = 'Apply Now <i class="arrow_right">';
     }
